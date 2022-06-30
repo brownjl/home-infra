@@ -5,5 +5,6 @@ resources:
   - namespace.yaml
   - echo-server
   - jb-server
+  - jb2-server
   - hajimari
   - git.yaml

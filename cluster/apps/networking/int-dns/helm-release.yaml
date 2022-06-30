@@ -24,7 +24,7 @@ spec:
 
   values:
     nameOverride: int-dns
-
+    logLevel: debug
     provider: rfc2136
 
     extraArgs:
@@ -57,7 +57,6 @@ spec:
 
     txtOwnerId: "default"
 
-    logLevel: info
 
     resources:
       requests:

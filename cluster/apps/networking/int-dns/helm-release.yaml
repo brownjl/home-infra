@@ -2,7 +2,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: internal-dns
+  name: int-dns
   namespace: networking
 spec:
   interval: 15m
@@ -23,7 +23,7 @@ spec:
       retries: 5
 
   values:
-    nameOverride: internal-dns
+    nameOverride: int-dns
 
     provider: rfc2136
 
@@ -41,10 +41,10 @@ spec:
         valueFrom:
           secretKeyRef:
             name: internal-dns
-            key: rfc2136_tsig_secrect
+            key: rfc2136_tsig_secret
 
     podAnnotations:
-      secret.reloader.stakater.com/reload: internal-dns
+      secret.reloader.stakater.com/reload: int-dns
 
     policy: sync
 

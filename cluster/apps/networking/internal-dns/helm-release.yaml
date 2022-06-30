@@ -57,9 +57,6 @@ spec:
 
     txtOwnerId: "default"
 
-    serviceMonitor:
-      enabled: true
-
     logLevel: info
 
     resources:
